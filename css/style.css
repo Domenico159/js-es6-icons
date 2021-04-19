@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Utilitys */
+.p-20{
+    padding: 20px;
+}
+
+.c-w{
+    color: #33272a;
+}
+
+
+.all-content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.tittle{
+    text-align: center;
+}
+
+.main-top{
+    display: flex;
+    justify-content: center;
+    background-color: #c3f0ca;
+}
+
+.main-top #icon{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+
+.main-center{
+    flex-grow: 1;
+    background-color: pink;
+}
+
