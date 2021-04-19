@@ -1,4 +1,8 @@
 
+
+// Array di icone
+
+
 const icons = [
     {
         name: 'cat',
@@ -97,3 +101,47 @@ const icons = [
         family: 'fas',
     },
 ];
+
+const container = document.querySelector('.main-center') ;
+
+// Stampo nel dom le prime icone in bianco e nero
+ printIcon(icons,container);
+
+
+
+
+
+
+
+
+
+
+
+/**********************************************
+ * Funcions
+ * ****************************************** */
+
+
+// Funzione per stampare nel dom le icone
+
+function printIcon(array,container){
+
+    let html ='';
+
+    array.forEach(element => {
+
+        const {name,prefix,family} = element;
+
+        html += `
+        <div class="card p-20" style="color:#33272a;">
+                <i class="${family} ${prefix}${name}"></i>
+                <div class="tittle-icon">${name}</div>
+            </div>`;
+
+            return html;
+
+    });
+
+     container.innerHTML = html;
+
+};

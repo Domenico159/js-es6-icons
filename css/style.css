@@ -10,7 +10,7 @@
     padding: 20px;
 }
 
-.c-w{
+.c-primary{
     color: #33272a;
 }
 
@@ -43,5 +43,25 @@
 .main-center{
     flex-grow: 1;
     background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
+.main-center .card{
+    flex-basis: calc(100% / 6 - 20px);
+    background-color:#faeee7 ;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px 10px;
+}
+
+.main-center .card i{
+    font-size: 40px;
+}
+
+.main-center .card .tittle-icon{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
