@@ -54,6 +54,7 @@ form {
     text-transform: capitalize;
     color: #33272a;
     outline: none;
+    cursor: pointer;
 }
 
 .main-center{
