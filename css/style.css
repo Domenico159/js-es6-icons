@@ -21,8 +21,18 @@
     min-height: 100vh;
 }
 
+.tittle h1{
+    font-family: 'Original Surfer', cursive;
+}
+
+.tittle span{
+    font-family: 'Original Surfer', cursive;
+    color:#ff8ba7 ;
+}
+
 .tittle{
     text-align: center;
+    background-color: #faeee7;
 }
 
 .main-top{
@@ -37,12 +47,15 @@
     border-radius: 5px;
     padding-left: 10px;
     margin-left: 30px;
+    text-transform: capitalize;
+    color: #33272a;
+    outline: none;
 }
 
 
 .main-center{
     flex-grow: 1;
-    background-color: pink;
+    background-color: #ffc6c7;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -65,3 +78,6 @@
     text-transform: uppercase;
     font-weight: 600;
 }
+
+
+

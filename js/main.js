@@ -112,7 +112,7 @@ const colors =['#33272a','#f25042','#8bd3dd'];
 
 const iconColored = coloredIcon(icons,colors);
 
- console.log(iconColored);
+//  console.log(iconColored);
 
 
 
@@ -138,25 +138,6 @@ let inputUser = boxInput.addEventListener('change', () =>{
    printIcon(user,container);
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
