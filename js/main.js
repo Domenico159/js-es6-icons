@@ -103,7 +103,7 @@ const icons = [
 ];
 
 
-const colors =['#33272a','#c3f0ca','#8bd3dd'];
+const colors =['#33272a','#f25042','#8bd3dd'];
 
 
 // console.log(types);
@@ -120,8 +120,42 @@ const iconColored = coloredIcon(icons,colors);
 
 const container = document.querySelector('.main-center') ;
 
+const boxInput = document.querySelector('#icon');
+
 // Stampo nel dom le prime icone in bianco e nero
- printIcon(iconColored,container);
+printIcon(iconColored,container);
+
+// Input user 
+
+createInputUser(boxInput,icons);
+
+
+
+let inputUser = boxInput.addEventListener('change', () =>{
+
+   let thisInput = boxInput.value;
+   const user =  filteredIcons(iconColored,thisInput);
+   printIcon(user,container);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -205,5 +239,40 @@ function coloredIcon(array,colors){
     } );
 
     return coloredIcons
+
+};
+
+
+// Create input user
+
+function createInputUser (container,array){
+
+    const types = getType(array);
+
+    types.forEach( (element) =>{
+
+        container.innerHTML += `<option value="${element}">${element}</option>`;
+
+    } )
+
+};
+
+
+// Cambiare le icone in base all'input
+
+
+function filteredIcons(array,input){
+
+    if(input == 'all'){
+        return array
+    }
+
+    const filtered = array.filter((element) =>{
+
+         return element.type == input
+
+    }) ;
+
+    return filtered
 
 };
