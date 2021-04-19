@@ -106,7 +106,6 @@ const icons = [
 const colors =['#33272a','#f25042','#8bd3dd'];
 
 
-// console.log(types);
 
 // Creare array con icone colorate
 
@@ -115,14 +114,11 @@ const iconColored = coloredIcon(icons,colors);
 //  console.log(iconColored);
 
 
-
-
-
 const container = document.querySelector('.main-center') ;
 
 const boxInput = document.querySelector('#icon');
 
-// Stampo nel dom le prime icone in bianco e nero
+// Stampo nel dom le prime icone 
 printIcon(iconColored,container);
 
 // Input user 
