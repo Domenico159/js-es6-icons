@@ -83,5 +83,15 @@ form {
     font-weight: 600;
 }
 
+.card{
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 8px 13px -4px rgba(0,0,0,0.82);
+}
+
 
 
