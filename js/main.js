@@ -102,10 +102,26 @@ const icons = [
     },
 ];
 
+
+const colors =['#33272a','#c3f0ca','#8bd3dd'];
+
+
+// console.log(types);
+
+// Creare array con icone colorate
+
+const iconColored = coloredIcon(icons,colors);
+
+ console.log(iconColored);
+
+
+
+
+
 const container = document.querySelector('.main-center') ;
 
 // Stampo nel dom le prime icone in bianco e nero
- printIcon(icons,container);
+ printIcon(iconColored,container);
 
 
 
@@ -130,10 +146,10 @@ function printIcon(array,container){
 
     array.forEach(element => {
 
-        const {name,prefix,family} = element;
+        const {name,prefix,family,color} = element;
 
         html += `
-        <div class="card p-20" style="color:#33272a;">
+        <div class="card p-20" style="color:${color};">
                 <i class="${family} ${prefix}${name}"></i>
                 <div class="tittle-icon">${name}</div>
             </div>`;
@@ -143,5 +159,51 @@ function printIcon(array,container){
     });
 
      container.innerHTML = html;
+
+};
+
+
+// Estraiamo i singoli type di icons
+
+function getType(array){
+
+    const types = [];
+
+         array.forEach( (element) =>{
+
+        let type =element.type ;
+
+        if(! types.includes(type)){
+
+            types.push(type);
+
+        }
+
+       });
+
+       return types
+
+};
+
+
+
+// Colorare icone 
+
+function coloredIcon(array,colors){
+
+    const types = getType(array);
+
+    const coloredIcons = array.map( (element) =>{
+
+        const thisIndex = types.indexOf(element.type)
+
+        return {
+            ...element,
+            color:colors[thisIndex]
+        }
+
+    } );
+
+    return coloredIcons
 
 };
